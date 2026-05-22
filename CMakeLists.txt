@@ -28,7 +28,11 @@ add_subdirectory(src)
 add_subdirectory(tests)
 
 add_executable(${PROJECT_NAME} main.cpp
-        )
+        player.cpp
+        player.h
+        bullet.cpp
+        bullet.h
+)
 target_link_libraries(${PROJECT_NAME} PRIVATE srclib raylib)
 
 # asset copy

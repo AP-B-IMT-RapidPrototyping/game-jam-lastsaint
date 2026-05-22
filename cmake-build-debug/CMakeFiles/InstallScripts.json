@@ -1,0 +1,15 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Users/xasof/Desktop/examen-project/game-jam-lastsaint/cmake-build-debug/cmake_install.cmake",
+		"C:/Users/xasof/Desktop/examen-project/game-jam-lastsaint/cmake-build-debug/_deps/raylib-build/cmake_install.cmake",
+		"C:/Users/xasof/Desktop/examen-project/game-jam-lastsaint/cmake-build-debug/_deps/raylib-build/raylib/cmake_install.cmake",
+		"C:/Users/xasof/Desktop/examen-project/game-jam-lastsaint/cmake-build-debug/_deps/raylib-build/raylib/external/glfw/cmake_install.cmake",
+		"C:/Users/xasof/Desktop/examen-project/game-jam-lastsaint/cmake-build-debug/_deps/raylib-build/raylib/external/glfw/src/cmake_install.cmake",
+		"C:/Users/xasof/Desktop/examen-project/game-jam-lastsaint/cmake-build-debug/src/cmake_install.cmake",
+		"C:/Users/xasof/Desktop/examen-project/game-jam-lastsaint/cmake-build-debug/tests/cmake_install.cmake",
+		"C:/Users/xasof/Desktop/examen-project/game-jam-lastsaint/cmake-build-debug/_deps/catch2-build/cmake_install.cmake",
+		"C:/Users/xasof/Desktop/examen-project/game-jam-lastsaint/cmake-build-debug/_deps/catch2-build/src/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
