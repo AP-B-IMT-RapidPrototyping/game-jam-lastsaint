@@ -18,3 +18,7 @@ void DrawPlayer(Player player)
 {
     DrawCircleV(player.position, 20, GREEN);
 }
+
+Vector2 PlayerPos(Player *player) {
+    return player->position;
+}

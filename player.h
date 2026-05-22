@@ -8,3 +8,4 @@ typedef struct Player {
 void InitPlayer(Player *player, Vector2 startPos);
 void UpdatePlayer(Player *player, float dt);
 void DrawPlayer(Player player);
+Vector2 PlayerPos();
