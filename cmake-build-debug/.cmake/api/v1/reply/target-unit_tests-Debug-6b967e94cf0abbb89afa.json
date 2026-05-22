@@ -55,7 +55,7 @@
 			{
 				"command" : 1,
 				"file" : 2,
-				"line" : 18,
+				"line" : 19,
 				"parent" : 5
 			},
 			{
@@ -163,11 +163,11 @@
 		},
 		{
 			"backtrace" : 2,
-			"id" : "Catch2WithMain::@fa92aa50e9bf5e1a7206"
+			"id" : "Catch2::@fa92aa50e9bf5e1a7206"
 		},
 		{
 			"backtrace" : 2,
-			"id" : "Catch2::@fa92aa50e9bf5e1a7206"
+			"id" : "Catch2WithMain::@fa92aa50e9bf5e1a7206"
 		}
 	],
 	"id" : "unit_tests::@a44f0ac069e85531cdee",

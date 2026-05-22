@@ -904,6 +904,15 @@ build src/CMakeFiles/srclib.dir/Held.cpp.obj: CXX_COMPILER__srclib_unscanned_Deb
   OBJECT_DIR = src\CMakeFiles\srclib.dir
   OBJECT_FILE_DIR = src\CMakeFiles\srclib.dir
 
+build src/CMakeFiles/srclib.dir/enemy.cpp.obj: CXX_COMPILER__srclib_unscanned_Debug C$:/Users/xasof/Desktop/examen-project/game-jam-lastsaint/src/enemy.cpp || cmake_object_order_depends_target_srclib
+  CONFIG = Debug
+  DEFINES = -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP
+  DEP_FILE = src\CMakeFiles\srclib.dir\enemy.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/xasof/Desktop/examen-project/game-jam-lastsaint/src/. -IC:/Users/xasof/Desktop/examen-project/game-jam-lastsaint/cmake-build-debug/_deps/raylib-src/src -IC:/Users/xasof/Desktop/examen-project/game-jam-lastsaint/cmake-build-debug/_deps/raylib-src/src/external/glfw/include
+  OBJECT_DIR = src\CMakeFiles\srclib.dir
+  OBJECT_FILE_DIR = src\CMakeFiles\srclib.dir
+
 
 # =============================================================================
 # Link build statements for STATIC_LIBRARY target srclib
@@ -912,7 +921,7 @@ build src/CMakeFiles/srclib.dir/Held.cpp.obj: CXX_COMPILER__srclib_unscanned_Deb
 #############################################
 # Link the static library src\libsrclib.a
 
-build src/libsrclib.a: CXX_STATIC_LIBRARY_LINKER__srclib_Debug src/CMakeFiles/srclib.dir/Held.cpp.obj || _deps/raylib-build/raylib/external/glfw/src/glfw _deps/raylib-build/raylib/libraylib.a
+build src/libsrclib.a: CXX_STATIC_LIBRARY_LINKER__srclib_Debug src/CMakeFiles/srclib.dir/Held.cpp.obj src/CMakeFiles/srclib.dir/enemy.cpp.obj || _deps/raylib-build/raylib/external/glfw/src/glfw _deps/raylib-build/raylib/libraylib.a
   CONFIG = Debug
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = src\CMakeFiles\srclib.dir
