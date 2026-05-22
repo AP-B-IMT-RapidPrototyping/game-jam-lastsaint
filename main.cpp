@@ -1,6 +1,18 @@
 #include <iostream>
+#include "raylib.h"
+
+int SCREEN_WIDTH = GetScreenWidth();
+int SCREEN_HEIGHT = GetScreenHeight();
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    InitWindow(SCREEN_WIDTH,SCREEN_HEIGHT, "LastSaint");
+    SetTargetFPS(60);
+    while (WindowShouldClose() == false)
+    {
+        BeginDrawing();
+        ClearBackground(BLUE);
+        EndDrawing();
+    }
+    CloseWindow();
     return 0;
 }
