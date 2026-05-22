@@ -1,13 +1,10 @@
 #include "raylib.h"
 
-class Player {
-public:
+typedef struct Player {
     Vector2 position;
     float speed;
-    void Init(Vector2 startPos);
-    void Update(float dt);
-    void Draw();
-private:
+} Player;
 
-};
-
+void InitPlayer(Player *player, Vector2 startPos);
+void UpdatePlayer(Player *player, float dt);
+void DrawPlayer(Player player);
