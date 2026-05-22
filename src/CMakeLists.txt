@@ -9,7 +9,8 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 
 add_library(srclib
-        Held.cpp)
+        Held.cpp
+        enemy.cpp)
 
 
 target_include_directories(srclib PUBLIC .)
