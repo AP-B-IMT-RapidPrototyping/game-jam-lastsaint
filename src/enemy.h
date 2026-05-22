@@ -10,9 +10,19 @@
 
 class Enemy
 {
+    int spawnRange = 200;
+    float enemySize = 20;
+    int maxEnemy = 2000;
+
+    std::vector<Vector2> enemyList;
+
+    int spawnDuration = 2;
+
+    //void enemyWander();
+
 public:
     void makeEnemy();
-    void enemyWander();
+
     void enemyDraw();
 };
 

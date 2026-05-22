@@ -1,23 +1,16 @@
+//
+// Created by Christophe on 22/05/2026.
+//
+
 #include "enemy.h"
 #include <iostream>
 #include <ostream>
 #include <random>
 #include <vector>
 #include "raylib.h"
-#include "../player.h"
 
-int spawnRange = 200;
-float enemySize = 20;
-int maxEnemy = 2000;
 
-std::vector<Vector2> enemyList;
 
-int spawnDuration = 2;
-
-Vector2 GetPlayerPos()
-{
-    return Vector2 {100, 100};
-}
 
 void Enemy::makeEnemy()
 {
@@ -28,11 +21,21 @@ void Enemy::makeEnemy()
     {
         posEnemy = {float(GetRandomValue(0, GetScreenWidth())), float(GetRandomValue(0, GetScreenHeight()))};
 
-        if ((p.position.x + spawnRange) >= posEnemy.x
+        /*if ((p.position.x + spawnRange) >= posEnemy.x
                 && (p.position.x <= posEnemy.x + (enemySize/2)))
         {
-            if ((p.position.y + spawnRange) >= posEnemy.y
+            if ((p.position.y + spawnRange) >= posEnemy.y           //player werkt niet dus midden van scherm
                 && p.position.y <= posEnemy.y + (enemySize/2))
+            {
+                return;
+            }
+        }*/
+
+        if ((GetScreenWidth()/2 + spawnRange) >= posEnemy.x
+                && (GetScreenWidth()/2 <= posEnemy.x + (enemySize/2)))
+        {
+            if ((GetScreenHeight()/2 + spawnRange) >= posEnemy.y           //player werkt niet dus midden van scherm
+                && GetScreenHeight()/2 <= posEnemy.y + (enemySize/2))
             {
                 return;
             }
@@ -42,19 +45,19 @@ void Enemy::makeEnemy()
     }
 }
 
-void enemyWander()
+/*void enemyWander()
 {
     int index = 0;
     for (Vector2 enemy : enemyList)
     {
-        Vector2 player = GetPlayerPos();
+        Vector2 player = player;
 
         if (enemy.x < player.x) enemy.x++;
         else if (enemy.x > player.x) enemy.x--;
         if (enemy.y < player.y) enemy.y++;
         else if (enemy.y > player.y) enemy.y--;
     }
-}
+}*/
 
 void Enemy::enemyDraw()
 {
