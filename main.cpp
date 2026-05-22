@@ -1,6 +1,6 @@
 #include "raylib.h"
 #include "raymath.h"
-
+#include <string>
 #include "player.h"
 #include "bullet.h"
 #include "enemy.h"
@@ -29,16 +29,16 @@ int main(void)
     SetTargetFPS(60);
 
     Player player;
-    InitPlayer(&player, (Vector2){ GetScreenWidth() / 2.0f, GetScreenHeight() / 2.0f });
+    player.InitPlayer(&player, (Vector2){ GetScreenWidth() / 2.0f, GetScreenHeight() / 2.0f });
 
     Bullet bullets[MAX_BULLETS];
-    InitBullets(bullets);
+    player.InitBullets(bullets);
 
     while (!WindowShouldClose())
     {
         float dt = GetFrameTime();
 
-        UpdatePlayer(&player, dt);
+        player.UpdatePlayer(&player, dt);
 
         Vector2 mouse = {GetMousePosition().x,GetMousePosition().y+15};
 
@@ -48,10 +48,10 @@ int main(void)
 
         if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
         {
-            ShootBullet(bullets, player.position, direction);
+            player.ShootBullet(bullets, player.position, direction);
         }
 
-        UpdateBullets(bullets, dt, GetScreenWidth(), GetScreenHeight());
+        player.UpdateBullets(bullets, dt, GetScreenWidth(), GetScreenHeight());
 
         if (EventTriggered(0.5))
         {
@@ -60,17 +60,14 @@ int main(void)
 
         BeginDrawing();
 
-        ClearBackground(BLUE);
+        ClearBackground(GREEN);
 
-        DrawPlayer(player);
-        DrawBullets(bullets);
-
+        player.DrawPlayer(player);
         DrawLineEx(player.position, mouse , 3, YELLOW);
-
+        player.DrawBullets(bullets);
         DrawText("WASD to move", 20, 20, 20, WHITE);
         DrawText("Mouse to aim", 20, 50, 20, WHITE);
         DrawText("Left click to shoot", 20, 80, 20, WHITE);
-
         enemy.enemyDraw();
 
         EndDrawing();

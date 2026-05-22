@@ -187,12 +187,6 @@
 },
 {
   "directory": "C:/Users/xasof/Desktop/examen-project/game-jam-lastsaint/cmake-build-debug",
-  "command": "C:\\PROGRA~1\\JETBRA~1\\CLION2~1.2\\bin\\mingw\\bin\\G__~1.EXE -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -IC:/Users/xasof/Desktop/examen-project/game-jam-lastsaint/src/. -IC:/Users/xasof/Desktop/examen-project/game-jam-lastsaint/cmake-build-debug/_deps/raylib-src/src -IC:/Users/xasof/Desktop/examen-project/game-jam-lastsaint/cmake-build-debug/_deps/raylib-src/src/external/glfw/include -g -std=gnu++20 -fdiagnostics-color=always -o src\\CMakeFiles\\srclib.dir\\Held.cpp.obj -c C:\\Users\\xasof\\Desktop\\examen-project\\game-jam-lastsaint\\src\\Held.cpp",
-  "file": "C:/Users/xasof/Desktop/examen-project/game-jam-lastsaint/src/Held.cpp",
-  "output": "C:/Users/xasof/Desktop/examen-project/game-jam-lastsaint/cmake-build-debug/src/CMakeFiles/srclib.dir/Held.cpp.obj"
-},
-{
-  "directory": "C:/Users/xasof/Desktop/examen-project/game-jam-lastsaint/cmake-build-debug",
   "command": "C:\\PROGRA~1\\JETBRA~1\\CLION2~1.2\\bin\\mingw\\bin\\G__~1.EXE -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -IC:/Users/xasof/Desktop/examen-project/game-jam-lastsaint/src/. -IC:/Users/xasof/Desktop/examen-project/game-jam-lastsaint/cmake-build-debug/_deps/raylib-src/src -IC:/Users/xasof/Desktop/examen-project/game-jam-lastsaint/cmake-build-debug/_deps/raylib-src/src/external/glfw/include -g -std=gnu++20 -fdiagnostics-color=always -o src\\CMakeFiles\\srclib.dir\\enemy.cpp.obj -c C:\\Users\\xasof\\Desktop\\examen-project\\game-jam-lastsaint\\src\\enemy.cpp",
   "file": "C:/Users/xasof/Desktop/examen-project/game-jam-lastsaint/src/enemy.cpp",
   "output": "C:/Users/xasof/Desktop/examen-project/game-jam-lastsaint/cmake-build-debug/src/CMakeFiles/srclib.dir/enemy.cpp.obj"

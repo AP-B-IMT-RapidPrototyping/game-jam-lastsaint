@@ -1,7 +1,7 @@
 #include "bullet.h"
 #include <iostream>
 
-void InitBullets(Bullet bullets[])
+void Bullet::InitBullets(Bullet bullets[])
 {
     for (int i = 0; i < MAX_BULLETS; i++)
     {
@@ -9,7 +9,7 @@ void InitBullets(Bullet bullets[])
     }
 }
 
-void ShootBullet(Bullet bullets[], Vector2 startPos, Vector2 direction)
+void Bullet::ShootBullet(Bullet bullets[], Vector2 startPos, Vector2 direction)
 {
     for (int i = 0; i < MAX_BULLETS; i++)
     {
@@ -28,7 +28,7 @@ void ShootBullet(Bullet bullets[], Vector2 startPos, Vector2 direction)
     }
 }
 
-void UpdateBullets(Bullet bullets[], float dt, int SCREEN_WIDTH, int SCREEN_HEIGHT)
+void Bullet::UpdateBullets(Bullet bullets[], float dt, int SCREEN_WIDTH, int SCREEN_HEIGHT)
 {
     for (int i = 0; i < MAX_BULLETS; i++)
     {
@@ -49,13 +49,14 @@ void UpdateBullets(Bullet bullets[], float dt, int SCREEN_WIDTH, int SCREEN_HEIG
     }
 }
 
-void DrawBullets(Bullet bullets[])
+void Bullet::DrawBullets(Bullet bullets[])
 {
     for (int i = 0; i < MAX_BULLETS; i++)
     {
         if (bullets[i].active)
         {
-            DrawCircleV(bullets[i].position, 5, RED);
+            DrawCircleV(bullets[i].position, 5, ORANGE);
         }
     }
 }
+
