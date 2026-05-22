@@ -3,12 +3,10 @@
 #include <string>
 #include "player.h"
 #include "bullet.h"
-#include "enemy.h"
 
 int SCREEN_WIDTH = GetScreenWidth();
 int SCREEN_HEIGHT = GetScreenHeight();
 
-Enemy enemy = Enemy();
 
 double lastUpdateTime = 0;
 
@@ -29,10 +27,11 @@ int main(void)
     SetTargetFPS(60);
 
     Player player;
+    Bullet bullet = Bullet();
     player.InitPlayer(&player, (Vector2){ GetScreenWidth() / 2.0f, GetScreenHeight() / 2.0f });
 
     Bullet bullets[MAX_BULLETS];
-    player.InitBullets(bullets);
+    bullet.InitBullets(bullets);
 
     while (!WindowShouldClose())
     {
@@ -48,10 +47,10 @@ int main(void)
 
         if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
         {
-            player.ShootBullet(bullets, player.position, direction);
+            bullet.ShootBullet(bullets, player.position, direction);
         }
 
-        player.UpdateBullets(bullets, dt, GetScreenWidth(), GetScreenHeight());
+        bullet.UpdateBullets(bullets, dt, GetScreenWidth(), GetScreenHeight());
 
         if (EventTriggered(0.5))
         {
@@ -64,7 +63,7 @@ int main(void)
 
         player.DrawPlayer(player);
         DrawLineEx(player.position, mouse , 3, YELLOW);
-        player.DrawBullets(bullets);
+        bullet.DrawBullets(bullets);
         DrawText("WASD to move", 20, 20, 20, WHITE);
         DrawText("Mouse to aim", 20, 50, 20, WHITE);
         DrawText("Left click to shoot", 20, 80, 20, WHITE);

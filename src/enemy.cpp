@@ -1,7 +1,3 @@
-//
-// Created by Christophe on 22/05/2026.
-//
-
 #include "enemy.h"
 #include <iostream>
 #include <ostream>

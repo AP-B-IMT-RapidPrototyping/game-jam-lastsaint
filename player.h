@@ -1,6 +1,6 @@
 #include "raylib.h"
 
-typedef struct Player {
+class Player {
 public:
     Vector2 position;
     float speed;
@@ -10,5 +10,5 @@ public:
     Vector2 PlayerPos();
     Rectangle GetRectPlayer(Player *player);
 private:
-} Player;
+};
 

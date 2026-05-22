@@ -35,3 +35,9 @@
 4558	4723	8011436858184070	_deps/raylib-build/raylib/libraylib.a	b068c3d523f4e6be
 609	697	8011557485453634	src/libsrclib.a	3e373f014ab1751d
 33	609	8011557479689141	src/CMakeFiles/srclib.dir/enemy.cpp.obj	5ffe4092162c2d7e
+47	181	8011618228281649	CMakeFiles/unit_testing_project.dir/player.cpp.obj	c86cabb1f99b9869
+55	546	8011618228361654	CMakeFiles/unit_testing_project.dir/bullet.cpp.obj	331fb855d5388129
+69	179	8011620995109594	CMakeFiles/unit_testing_project.dir/player.cpp.obj	c86cabb1f99b9869
+81	222	8011622626548005	CMakeFiles/unit_testing_project.dir/player.cpp.obj	c86cabb1f99b9869
+41	112	8011623391771189	CMakeFiles/unit_testing_project.dir/player.cpp.obj	c86cabb1f99b9869
+47	419	8011623391821187	CMakeFiles/unit_testing_project.dir/bullet.cpp.obj	331fb855d5388129

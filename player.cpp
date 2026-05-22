@@ -18,14 +18,3 @@ void Player::DrawPlayer(Player player)
 {
     DrawCircleV(player.position, 20, BLUE);
 }
-
-Vector2 PlayerPos(Player *player) {
-    return player->position;
-}
-
-Rectangle Player::GetRectPlayer(Player *player) {
-    return {player->position.x,player->position.y,
-        int(5),
-        int(5)
-    };
-}

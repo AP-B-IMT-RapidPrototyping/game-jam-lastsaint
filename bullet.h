@@ -6,8 +6,8 @@
 #define MAX_BULLETS 100
 #define BULLET_SPEED 800.0f
 
-typedef struct Bullet {
-    public:
+class Bullet {
+public:
     Vector2 position;
     Vector2 velocity;
     bool active;
@@ -16,7 +16,6 @@ typedef struct Bullet {
     void UpdateBullets(Bullet bullets[], float dt, int SCREEN_WIDTH, int SCREEN_HEIGHT);
     void DrawBullets(Bullet bullets[]);
     Rectangle GetRectBullet();
-private:
-} Bullet;
+};
 
 
