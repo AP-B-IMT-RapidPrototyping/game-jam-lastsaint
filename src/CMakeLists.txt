@@ -9,7 +9,6 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 
 add_library(srclib
-        Held.cpp
         enemy.cpp)
 
 

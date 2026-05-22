@@ -6,6 +6,7 @@
 #define UNIT_TESTING_PROJECT_ENEMY_H
 #include <vector>
 #include "raylib.h"
+#include "../player.h"
 
 class Enemy
 {

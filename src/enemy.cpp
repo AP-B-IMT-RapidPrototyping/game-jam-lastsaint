@@ -3,16 +3,19 @@
 //
 
 #include "enemy.h"
-
 #include <iostream>
 #include <ostream>
 #include <random>
 #include <vector>
 #include "raylib.h"
+#include "../player.h"
 
 int spawnRange = 200;
-int enemySize = 20;
+float enemySize = 20;
+int maxEnemy = 2000;
+
 std::vector<Vector2> enemyList;
+
 int spawnDuration = 2;
 
 Vector2 GetPlayerPos()
@@ -22,11 +25,25 @@ Vector2 GetPlayerPos()
 
 void Enemy::makeEnemy()
 {
-    Vector2 player = GetPlayerPos();
+    bool insideRange = true;
+    Vector2 posEnemy;
 
-    Vector2 posEnemy = {float(GetRandomValue(player.x + spawnRange, GetScreenWidth())), float(GetRandomValue(player.y + spawnRange, GetScreenHeight()))};
-    std::cout << " X: " << posEnemy.x << " Y: " << posEnemy.y << std::endl;
-    enemyList.push_back(posEnemy);
+    if (enemyList.size() <= maxEnemy)
+    {
+        posEnemy = {float(GetRandomValue(0, GetScreenWidth())), float(GetRandomValue(0, GetScreenHeight()))};
+
+        if ((p.position.x + spawnRange) >= posEnemy.x
+                && (p.position.x <= posEnemy.x + (enemySize/2)))
+        {
+            if ((p.position.y + spawnRange) >= posEnemy.y
+                && p.position.y <= posEnemy.y + (enemySize/2))
+            {
+                return;
+            }
+        }
+        std::cout << " X1: " << posEnemy.x << " Y1: " << posEnemy.y << std::endl;
+        enemyList.push_back(posEnemy);
+    }
 }
 
 void enemyWander()
